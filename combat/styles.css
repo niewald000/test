@@ -1,0 +1,445 @@
+body {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    padding: 0px !important;
+    margin: 0px !important;
+    scroll-behavior: smooth;
+}
+
+.main {
+    background-image: url(img/background/camera.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat, repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1px;
+}
+
+.header_bottom {
+    background: rgb(204, 53, 53);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main_nav {
+    text-align: center;
+}
+
+.main_nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main_nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.main_nav ul li:hover {
+    background: rgb(204, 53, 53);
+}
+
+.main_nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo_combat {
+    width: 400px;
+    height: 400px;
+}
+
+.text_hm {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 30px;
+    font-size: 85px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.aboutcombat {
+    color: white;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 50px;
+    text-indent: 30px;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 0;
+}
+
+.aboutcombat + p{
+    text-indent: 1.5em;
+    margin-top: 0
+}
+
+
+.galery {
+    background-image: url(img/background/sniper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    height: auto;
+    width: auto;
+    display: grid;
+    place-content: center;
+    flex-direction: column;
+}
+
+#about_gallery{
+    display: grid;
+    place-content: center;
+    margin: 20px;
+    font-size: 36px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.carousel {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 35px;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    border-radius: 50%;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.oferta {
+    background-image: url(img/background/masks.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#accordion{
+    margin: 100px auto;
+    width: 600px;
+}
+
+#accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgb(204, 53, 53);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#accordion li label{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+#accordion label + input[type="radio"]{
+    display: none
+}
+
+#accordion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+
+#gallery {
+    background-image: url(img/background/weapon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+
+.gallery img{
+    width: 100%;
+    border: solid 3px rgb(204, 53, 53);
+    border-radius: 15px;
+    box-shadow: 0 0 48px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    max-height: 150px;
+    max-width: 200px;
+}
+
+.gallery a{
+    margin: 25px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s;
+}
+
+.gallery a:hover{
+    transform: scale(1.2);
+}
+
+.referens {
+    background-image: url(img/background/helicopter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+}
+
+.referens__container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+}
+
+.list__referens {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.list__referens__element {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.image {
+    position: relative;
+    width: 400px;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    border: solid 3px rgb(204, 53, 53);
+    border-radius: 15px;
+    box-shadow: 0 0 48px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border-radius: 15px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.contact {
+    background-color: black;
+}
+
+.contact__all {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#contact_all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.dane {
+    list-style: none;
+    padding: 0;
+}
+
+.phone {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.mail {
+    color: white;
+    text-decoration: none;
+}
+
+.mail img {
+    width: 16px;
+    height: 16px;
+}
+
+#facebook {
+    width: 32px;
+    height: 32px;
+    border-radius: 10%;
+}
+
+#instagram {
+    width: 32px;
+    height: 32px;
+}
+
+.socialmedia {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 20px;
+    color: white;
+}
+
+#title img {
+    width: 96px;
+    height: 96px;
+    display: grid;
+    place-content: center;
+}
